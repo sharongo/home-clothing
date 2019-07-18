@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 
-const Header = props => {
+const Header = ({ currentUser }) => {
+
+    const signOut = () => {
+        
+    }
+
     return (
         <div className='header'>
             <Link className='logo-container' to='/'>
@@ -17,6 +22,15 @@ const Header = props => {
                 <Link className='option' to='/shop'>
                     CONTACT
                 </Link>
+                {currentUser ? (
+                    <div className='option' onClick={() => signOut()}>
+                        SIGN OUT
+                    </div>
+                ) : (
+                        <Link className='option' to='/signin'>
+                            SIGN IN
+                        </Link>
+                    )}
             </div>
         </div>
     )

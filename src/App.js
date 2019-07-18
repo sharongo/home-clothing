@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import HomePage from './pages/homepage/homepage'
 import ShopPage from './pages/shop/shopPage'
@@ -9,17 +9,33 @@ import Header from './components/header/header'
 
 
 
-function App() {
-  return (
-    <div>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route path='/signin' component={SignInAndSignUpPage} />
-      </Switch>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    currentUser: null
+  }
+
+  componentDidMount(){
+    console.log(this.state.currentUser)
+  }
+
+  componentWillMount(){
+    console.log(this.state.currentUser)
+  }
+
+  render() {
+    return (
+      <div>
+        <Header currentUser={this.state.currentUser} />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SignInAndSignUpPage} />
+        </Switch>
+      </div>
+    );
+  }
+
 }
 
 export default App;
