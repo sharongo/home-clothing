@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomePage from './pages/homepage/homepage'
-import ShopPage from './pages/shop/shopPage'
+import HomePage from './pages/homepage/homepage.component'
+import ShopPage from './pages/shop/shop.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import Header from './components/header/header'
+import Header from './components/header/header.component'
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions'
 

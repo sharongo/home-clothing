@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './sign-in.scss'
-import FormInput from '../../components/form-input/form-input'
-import CustomButton from '../custom-button/custom-button'
+import './sign-in.styles.scss'
+import FormInput from '../form-input/form-input.component'
+import CustomButton from '../custom-button/custom-button.component'
 
 
 class SignIn extends Component {
