@@ -3,6 +3,7 @@ import './sign-in.scss'
 import FormInput from '../../components/form-input/form-input'
 import CustomButton from '../custom-button/custom-button'
 
+
 class SignIn extends Component {
     constructor(props) {
         super(props)
@@ -13,10 +14,14 @@ class SignIn extends Component {
         }
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
 
+        const { email, password } = this.state
+
         this.setState({ email: '', password: '' });
+
+        
     };
 
     handleChange = event => {
